@@ -1,10 +1,11 @@
 pragma circom 2.1.8;
 
+// Create constraints that enforces both signals
+// in `in` are binary, i.e. 0 or 1.
+
 template BinaryXY() {
     signal input in[2];
 
-    in[0] * (in[0] - 1) === 0;
-    in[1] * (in[1] - 1) === 0;
 }
 
 component main = BinaryXY();
